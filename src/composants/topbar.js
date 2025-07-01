@@ -1,4 +1,4 @@
-// import '../fontawesome/css/all.min.css'
+import '../fontawesome/css/all.min.css'
 import { Link } from "react-router-dom"
 // import { Compteur } from "../best"
 

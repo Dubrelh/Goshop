@@ -60,7 +60,7 @@ export const Produits = [
     },
     {
         id: "4",
-        img1: require('../medias/image4.jpg'),
+        img1: require('../medias/image22.png'),
         image2: "",
         image3: "",
         image4: "",
