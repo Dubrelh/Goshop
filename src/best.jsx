@@ -49,17 +49,17 @@ function Product (props){
 
 const commentaires = [
   {
-    nom: "Awa D.",
+    nom: "Mark Z.",
     texte: "Super expérience ! Livraison rapide et produits conformes. Je recommande GoShop à 100%.",
     note: 5
   },
   {
-    nom: "Moussa K.",
+    nom: "Elon M.",
     texte: "Site facile à utiliser, service client réactif. J'ai trouvé tout ce qu'il me fallait.",
     note: 4
   },
   {
-    nom: "Fatou S.",
+    nom: "Kemeni F.",
     texte: "Très satisfaite de ma commande. Les prix sont abordables et la qualité au rendez-vous.",
     note: 5
   }

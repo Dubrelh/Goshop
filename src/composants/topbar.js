@@ -1,12 +1,13 @@
 import '../fontawesome/css/all.min.css'
 import { Link } from "react-router-dom"
+import logo from '../medias/logo.png'
 // import { Compteur } from "../best"
 
 export default function TOPBAR(){
 
     return(
         <div className='topbar'>
-            <h3><i><b>GoShop</b></i></h3>
+                <h3><i><b>GoShop</b></i></h3>
             <div className="link">
                 <Link to="/bobo">Accueil</Link>
                 <Link to="">Produits</Link>
@@ -18,5 +19,6 @@ export default function TOPBAR(){
                 <button><i className='fas fa-bag-shopping'></i><span></span></button>
             </div>
         </div>
+        
     )
 }

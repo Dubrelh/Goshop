@@ -51,6 +51,36 @@
   justify-content: space-between;
 }
 
+.topbar .link {
+  color: #b8860b;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: 
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+  position: relative;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+.topbar .link a:hover{
+  background: linear-gradient(90deg, #ffe082 0%, #f6f6a5 100%);
+  color: #222;
+  box-shadow: 0 2px 8px #ffe082;
+  text-decoration: none;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.topbar .link a.active {
+  background: #b8860b;
+  color: #fff;
+  box-shadow: 0 2px 8px #ffe082;
+}
+
 .baniere{
   width: inherit;
   background-image: linear-gradient( 351deg,rgb(246, 246, 165), beige, rgb(246, 246, 165));
@@ -58,6 +88,40 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+/* Style des icônes de la topbar */
+.topbar .but button {
+  background: none;
+  border: none;
+  margin: 0 6px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  font-size: 20px;
+  color: #b8860b;
+  position: relative;
+}
+
+.topbar .but button:hover {
+  background: #ffe082;
+  color: #222;
+  box-shadow: 0 2px 8px #ffe082;
+  transform: scale(1.12) rotate(-8deg);
+}
+
+.topbar .but button:active {
+  background: #b8860b;
+  color: #fff;
+  transform: scale(0.98);
+}
+
+.tophone{
+  display: none;
 }
 
 .baniere marquee{
@@ -79,8 +143,11 @@
 }
 
 .slide button{
-  width: 200px;
-  padding: 10px;
+  width: 250px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 20px;
+  height: 50px;
   position: relative;
   top: 5%;
   border: 0;
@@ -89,7 +156,7 @@
 }
 
 .slide button:hover{
-  background-color: #abcdde;
+  background-color: rgba(255, 255, 0, 0.7);
   transition: 1s ease;
 }
 
@@ -474,5 +541,51 @@
  .categorie .button{
   flex-shrink: 0;
  }
+ 
+ .topbar .link{
+  display: none;
+ }
 
+ .topbar .but{
+  display: none;
+ }
+
+ .topbar h3{
+  display: none;
+ }
+
+ .topbar{
+  display: none;
+ }
+
+ .tophone{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: block;
+ }
+
+ .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 255, 0.2);
+ }
+
+ .tophone img{
+  width: 100px;
+  margin: 0px;
+  height: auto;
+ }
+
+ .tophone .btn{
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: black;
+  margin: 0;
+  z-index: 1000;
+ }
 }
