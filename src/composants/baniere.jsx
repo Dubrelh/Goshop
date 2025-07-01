@@ -11,7 +11,7 @@ export default function BANIERE(){
         return () => clearInterval(interval)
     },[])
 
-    return(
+    return( 
         <div className="baniere">
            { state?
            <Slide id='i1' backing={require('../medias/image9.png')} message='Pleins de reduction pour les premieres commandes'/>

@@ -12,19 +12,28 @@
   position: fixed;
   top: 0px;
   display: flex;
-  justify-content: center;
   gap: 150px;
   width: 100%;
   background-color: transparent;
+  justify-content: center;
+}
+
+.topbar h3{
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
 }
 
 .topbar button{
   background-color: transparent;
   font-size: 20px;
   border: 0;
+  margin: 5px;
 }
 
-.topbar div{
+.topbar .link{
   margin: 17px;
 }
 
@@ -33,11 +42,18 @@
   font-size: 17px;
   margin: 5px;
   color: black;
+  font-weight: bold;
+}
+
+
+.topbar .but{
+  display: flex;
+  justify-content: space-between;
 }
 
 .baniere{
   width: inherit;
-  background-image: linear-gradient(to bottom,yellow, white, rgb(241, 241, 111));
+  background-image: linear-gradient( 351deg,rgb(246, 246, 165), beige, rgb(246, 246, 165));
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -69,7 +85,7 @@
   top: 5%;
   border: 0;
   border-radius: 5px;
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: yellow;
 }
 
 .slide button:hover{
@@ -78,7 +94,8 @@
 }
 
 .slide p{
-  font-size: 25px;
+  font-size: 40px;
+  color: white;
   font-weight: bold;
 }
 
@@ -108,7 +125,7 @@
   background-image: url(medias/image11.jpg);
 }
 
-.categorie div{
+.categorie .categ{
   display: flex;
   scroll-behavior: smooth;
   gap: 20px;
@@ -139,6 +156,76 @@
   background-color: rgba(255, 193, 71, 0.5);
 }
 
+/* Barre de recherche catégorie  */
+.categorie-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 0;
+  border-radius: 40px;
+  box-shadow: 0 4px 24px rgba(246, 246, 165, 0.25), 0 1.5px 6px #f3e5d8;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  margin: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.categorie-search.fixed {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px #f3e5d8, 0 2px 8px #ffe082;
+  animation: slideDown 0.3s;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 16px 22px;
+  border-radius: 40px 0 0 40px;
+  font-size: 17px;
+  background: transparent;
+  color: #222;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.search-input::placeholder {
+  color: #b8860b;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.search-btn {
+  background: linear-gradient(90deg, #ffe082 0%, #f6f6a5 100%);
+  border: none;
+  border-radius: 0 40px 40px 0;
+  padding: 0 24px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #b8860b;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+}
+
+.search-btn:hover {
+  background: #b8860b;
+  color: #fff;
+}
+
 .new:hover{
   background-color: transparent;
   color: white;
@@ -160,6 +247,46 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+/* Avis clients */
+.avis-clients {
+  margin: 40px 0;
+  padding: 20px;
+  background: #fffbe6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f3e5d8;
+}
+.avis-clients h2 {
+  color: #b8860b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.avis-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.avis-card {
+  background: #f6f6a5;
+  border-radius: 8px;
+  padding: 15px;
+  min-width: 220px;
+  max-width: 300px;
+  box-shadow: 0 0 5px #ffe082;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.avis-stars {
+  color: #b8860b;
+  margin: 5px 0;
+  font-size: 18px;
+}
+.avis-card p {
+  font-style: italic;
+  margin: 0;
 }
 
 /* style de presentation des produits produits */
@@ -197,14 +324,14 @@
 }
 
 .product .title h2{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: black;
   margin: 0;
 }
 
 .product .title h3{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
 }
@@ -214,7 +341,7 @@
   padding: 5px;
   border: 0;
   border-radius: 5px;
-  background-color: rgba(255, 193, 71, 0.8);
+  background-color: #ffe082;
   font-weight: bold;
 }
 
@@ -228,6 +355,81 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   font-weight: bold;
 }
+
+
+/* Footer styles */
+.footer {
+  background: linear-gradient(90deg, #f6f6a5 0%, #f3e5d8 100%);
+  color: #222;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 10px 10px 10px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  border-top: 2px solid #ffe082;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #b8860b;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: #b8860b;
+}
+
+.footer-section.newsletter input[type="email"] {
+  padding: 7px;
+  border: 1px solid #ffe082;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 60%;
+}
+
+.footer-section.newsletter button {
+  padding: 7px 12px;
+  background: #ffe082;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-section.newsletter button:hover {
+  background: #b8860b;
+  color: white;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #888;
+}
+
 
 @media(max-width: 440px){
   .product{
@@ -262,4 +464,15 @@
  .best div{
   gap: 10px;
  }
+ .categorie .categ{
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 80%;
+ }
+
+ .categorie .button{
+  flex-shrink: 0;
+ }
+
 }

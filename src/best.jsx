@@ -1,26 +1,31 @@
-import img1 from './medias/image1.png'
-import img2 from './medias/image2.jpg'
-import img17 from './medias/image17.webp'
-import img4 from './medias/image4.jpg'
-import img5 from './medias/image5.jpg'
+import { Produits } from "./composants/products"
 
 export default function BEST(){
+
     return(
         <div className="best">
             <h1>Nos best-seller</h1>
             <div>
-              <Product img1={img1}  title="Robe d'été en coton pur" prix="7350" isnew />
-              <Product img1={img2}  title="Montre connecté, recharge sans fil" prix="17350" />
-              <Product img1={img17}  title="Montre connecté, recharge sans fil" prix="17350" isnew/>
-              <Product img1={img4}  title="Montre connecté, recharge sans fil" prix="17350" />
-              <Product img1={img5}  title="Montre connecté, recharge sans fil" prix="17350" isnew/>
+              {Produits.map(Produits => 
+            (
+              <Product img1 = {Produits.img1} title={Produits.nom} prix = {Produits.prix} isnew={Produits.statut}/>
+            )
+            )}
             </div>
+            <AvisClients /> 
         </div>
     )
 }
 
 // img2={img2} img3={img3} img4={img4}
 
+let count = 0
+
+function Increment(){
+    count = count + 1
+    console.log(count)
+}
+    
 function Product (props){
   return(
     <div className='product'>
@@ -36,9 +41,45 @@ function Product (props){
           <h3>{props.prix} fcfa</h3>
         { props.isnew ? <span className="nouv">New</span> : null }
         </div>
-        <button>Ajouter au panier</button>
+        <button id='compt' onClick={Increment}>Ajouter au panier</button>
       </div>
     </div>
   )
 }
 
+const commentaires = [
+  {
+    nom: "Awa D.",
+    texte: "Super expérience ! Livraison rapide et produits conformes. Je recommande GoShop à 100%.",
+    note: 5
+  },
+  {
+    nom: "Moussa K.",
+    texte: "Site facile à utiliser, service client réactif. J'ai trouvé tout ce qu'il me fallait.",
+    note: 4
+  },
+  {
+    nom: "Fatou S.",
+    texte: "Très satisfaite de ma commande. Les prix sont abordables et la qualité au rendez-vous.",
+    note: 5
+  }
+];
+
+function AvisClients() {
+  return (
+    <div className="avis-clients">
+      <h2>Avis de nos clients</h2>
+      <div className="avis-list">
+        {commentaires.map((c, i) => (
+          <div className="avis-card" key={i}>
+            <strong>{c.nom}</strong>
+            <div className="avis-stars">
+              {"★".repeat(c.note)}{"☆".repeat(5 - c.note)}
+            </div>
+            <p>"{c.texte}"</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

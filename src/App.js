@@ -1,6 +1,7 @@
 import HEADER from './header';
 import CONTAINER from './container';
 import BEST from './best';
+import FOOTER from './footer';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <HEADER />
       <CONTAINER />
       <BEST />
+      <FOOTER />
     </div>
   );
 }
