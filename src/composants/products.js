@@ -22,7 +22,7 @@ export const Produits = [
     },
     {
         id: "2",
-        img1: require('../medias/image2.jpg'),
+        img1: require('../medias/image2.png'),
         image2: "",
         image3: "",
         image4: "",
@@ -41,7 +41,7 @@ export const Produits = [
     },
     {
         id: "3",
-        img1: require('../medias/image17.webp'),
+        img1: require('../medias/image17.png'),
         image2: "",
         image3: "",
         image4: "",
@@ -79,7 +79,7 @@ export const Produits = [
     },
     {
         id: "5",
-        img1: require('../medias/image5.jpg'),
+        img1: require('../medias/image5.png'),
         image2: "",
         image3: "",
         image4: "",
