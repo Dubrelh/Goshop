@@ -8,7 +8,6 @@
   background-color: rgba(0, 0, 255, 0.2);
 }
 
-
 .topbar {
   position: fixed;
   top: 0;
@@ -192,14 +191,30 @@
 }
 
 .categorie .new{
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  padding: 15px;
-  font-size: 25px;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #ffb300 60%, #ffe082 100%);
+  color: #6d4c00;
   font-weight: bold;
-  /* background-color: #ffc107; */
-  background-color: rgba(255, 193, 71, 0.5);
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 16px rgba(255,179,0,0.12);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new i {
+  color: #fff;
+  font-size: 1.2em;
+}
+.new:hover {
+  background: linear-gradient(90deg, #ffe082 60%, #ffb300 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* Barre de recherche catégorie  */
@@ -284,11 +299,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 15px;
 }
 
 .best div{
   display: flex;
+  height: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -549,7 +564,6 @@
 
 @media(max-width: 440px){
   .product{
-    margin-top: 10px;
     width: 45%;
     height: 350px;
   }

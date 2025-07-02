@@ -3,9 +3,14 @@ import { Produits } from "./composants/products"
 export default function BEST({ categorie = "Tout" }) {
 
   // Filtre les produits selon la catégorie sélectionnée
-  const produitsFiltres = categorie === "Tout"
-    ? Produits
-    : Produits.filter(prod => prod.categorie === categorie);
+  let produitsFiltres = Produits;
+  if (categorie === "isnew") {
+    produitsFiltres = Produits.filter(prod => prod.statut === "isnew");
+  } else if (categorie !== "Tout" && categorie !== "") {
+    produitsFiltres = Produits.filter(prod => prod.categorie === categorie);
+  } else if (categorie === "") {
+    produitsFiltres = [];
+  }
 
     return(
       <div className="best" id="best">

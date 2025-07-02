@@ -1,4 +1,3 @@
-
 export default function CATEGORIE({ onSelectCategorie }) {
   // Fonction pour sélectionner la catégorie et scroller vers la section "best"
   const handleCategorieClick = (categorie) => {
@@ -18,7 +17,12 @@ export default function CATEGORIE({ onSelectCategorie }) {
         <button className="button c3" onClick={() => handleCategorieClick("Enfants")}>Enfants</button>
         <button className="button" onClick={() => handleCategorieClick("Tout")}>Tout</button>
       </div>
-      <button className="new">Découvrir les nouveautés <i className="fab fa-golang"></i></button>
+      <button
+        className="new"
+        onClick={() => handleCategorieClick("isnew")}
+      >
+        Découvrir les nouveautés <i className="fas fa-star"></i>
+      </button>
     </div>
   );
 }
