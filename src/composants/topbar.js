@@ -1,24 +1,19 @@
-import '../fontawesome/css/all.min.css'
-import { Link } from "react-router-dom"
-import logo from '../medias/logo.png'
-// import { Compteur } from "../best"
+import '../fontawesome/css/all.min.css';
+import logo from '../medias/logo.png';
 
-export default function TOPBAR(){
-
-    return(
+export default function TOPBAR() {
+    return (
         <div className='topbar'>
-                <h3><i><b>GoShop</b></i></h3>
-            <div className="link">
-                <Link to="/bobo">Accueil</Link>
-                <Link to="">Produits</Link>
-                <Link to="">Parametre</Link>
+            <div className="topbar-left">
+                <img src={logo} alt="GoShop logo" className="topbar-logo" />
+                <span className="topbar-title"><b>GoShop</b></span>
             </div>
-            <div className="but">
-                <button><i className="fas fa-user"></i></button>
-                <button><i className="fas fa-heart"></i></button>
-                <button><i className='fas fa-bag-shopping'></i><span></span></button>
-            </div>
+                <div className="topbar-links">
+                <a href="#top">Accueil</a>
+                <a href="#categorie">Catégories</a>
+                <a href="#best">Best-seller</a>
+                <a href="#apropos">À propos</a>
+                </div>
         </div>
-        
-    )
+    );
 }
