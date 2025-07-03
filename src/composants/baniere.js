@@ -20,9 +20,9 @@ export default function BANIERE(){
             </div>
             <div className="baniere-slide">
                 { state?
-                <Slide id='i1' backing={require('../medias/image9.png')} message='Pleins de reduction pour les premieres commandes'/>
+                <Slide id='i1' backing="https://th.bing.com/th/id/OIP.UuvAWqDz7SphKDIu7Y8DdAHaFO?w=252&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" message='Bienvenue chez vous !'/>
                 :
-                <Slide id='i2' backing={require('../medias/image1.png')} message='offres exclusives pour la rentrer'/>
+                <Slide id='i2' backing="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" message='Vous cherchez les bons produits ? Vous êtes au bon endroit.'/>
                 }
             </div>
             <marquee behavior="" direction="">Découvrez nos meilleures sélections Amazon et profitez d’offres exclusives sur vos achats !</marquee>

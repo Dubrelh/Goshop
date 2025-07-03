@@ -12,9 +12,9 @@ export default function CATEGORIE({ onSelectCategorie }) {
     <div className="categorie" id="categorie">
       <h2>Acheter par catégories</h2>
       <div className="categ">
-        <button className="button c1" onClick={() => handleCategorieClick("Hommes")}>Hommes</button>
-        <button className="button c2" onClick={() => handleCategorieClick("Femmes")}>Femmes</button>
-        <button className="button c3" onClick={() => handleCategorieClick("Enfants")}>Enfants</button>
+        <button className="button c1" onClick={() => handleCategorieClick("Santé & Bien-être à domicile")}>Santé & Bien-être à domicile</button>
+        <button className="button c2" onClick={() => handleCategorieClick("Produits pour animaux")}>Produits pour animaux</button>
+        <button className="button c3" onClick={() => handleCategorieClick("Accessoires télétravail / bureau")}>Accessoires télétravail / bureau</button>
         <button className="button" onClick={() => handleCategorieClick("Tout")}>Tout</button>
       </div>
       <button

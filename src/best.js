@@ -43,7 +43,7 @@ function Product(props) {
       <div className='title'>
         <h2>{props.nom}</h2>
         <div>
-          <h3>{props.prix} fcfa</h3>
+          <h3>{props.prix} €</h3>
           {props.statut === "isnew" && <span className="nouv">New</span>}
         </div>
         <p>{props.description}</p>
@@ -59,18 +59,18 @@ function Product(props) {
 
 const commentaires = [
   {
-    nom: "Mark Z.",
-    texte: "Super expérience ! Livraison rapide et produits conformes. Je recommande GoShop à 100%.",
+    nom: "Sophie L.",
+    texte: "Grâce à GoShop, j’ai trouvé des produits Amazon de qualité à des prix imbattables. L’achat est simple et rapide !",
     note: 5
   },
   {
-    nom: "Elon M.",
-    texte: "Site facile à utiliser, service client réactif. J'ai trouvé tout ce qu'il me fallait.",
+    nom: "Arnaud T.",
+    texte: "Sélection variée et offres exclusives : parfait pour faire de bonnes affaires sur Amazon via GoShop.",
     note: 4
   },
   {
-    nom: "Kemeni F.",
-    texte: "Très satisfaite de ma commande. Les prix sont abordables et la qualité au rendez-vous.",
+    nom: "Fatou N.",
+    texte: "J’adore la présentation claire des produits et les liens directs vers Amazon. Je recommande à tous les acheteurs malins !",
     note: 5
   }
 ];
