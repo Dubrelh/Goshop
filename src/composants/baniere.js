@@ -1,5 +1,6 @@
 import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 import { useState, useEffect } from 'react'
+import logo from '../medias/logo.png'
 
 export default function BANIERE(){
     const [state, setState] = useState(true)
@@ -15,8 +16,8 @@ export default function BANIERE(){
     return( 
         <div className="baniere">
             <div className="baniere-logo">
-                {/* Remplace le src par le chemin de ton logo */}
-                <img src={require('../medias/logo.png')} alt="Logo" style={{height: 60}} />
+                <img src={logo} alt="GoShop logo" className="topbar-logo" />
+                <span className="topbar-title"><b>GoShop</b></span>
             </div>
             <div className="baniere-slide">
                 { state?

@@ -1,9 +1,14 @@
+import logo from './medias/logo.png'
+
 export default function FOOTER() {
     return (
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-brand">
-                    <h3>GoShop</h3>
+                    <div className="topbar-left">
+                       <img src={logo} alt="GoShop logo" className="topbar-logo" />
+                       <span className="topbar-title"><b>GoShop</b></span>
+                    </div>
                     <p>
                         GoShop sélectionne pour vous les meilleurs produits du moment en partenariat avec Amazon.
                         Achetez malin, simplement et en toute sécurité.
