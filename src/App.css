@@ -616,6 +616,10 @@
   display: none;
  }
 
+ .slide{
+  height: 65vh;
+ }
+
 }
 
 @media (max-width: 900px) {
